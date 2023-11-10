@@ -1,38 +1,33 @@
-document.querySelector("#stylesheet").removeAttribute("disabled");
-let front = document.getElementById("front");
-let second = document.getElementById("second");
-let third = document.getElementById("third");
-let fourth = document.getElementById("fourth");
-let fifth = document.getElementById("fifth");
-let title = document.getElementById("name");
+let nav_button = document.getElementById("nav-button");
+let nav = document.getElementById("nav");
 
-let top_button = document.getElementById("top_btn");
-
-window.addEventListener("scroll", parallax);
-
-window.onscroll = function () {
-  revealButton();
-};
-
-function parallax() {
-  let value = window.scrollY;
-  front.style.top = value * -0.45 + "px";
-
-  second.style.top = value * -0.4 + "px";
-
-  third.style.top = value * -0.3 + "px";
-
-  fourth.style.top = value * -0.2 + "px";
-
-  fifth.style.top = value * -0.1 + "px";
-
-  title.style.top = value * 1.05 + "px";
-}
-
-function revealButton() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    top_button.style.display = "block";
+nav_button.addEventListener("click", function () {
+  if (nav.style.width == "100%") {
+    nav.style.width = "0%";
+    nav_button.childNodes[3].style.opacity = "1";
+    nav_button.childNodes[1].style.transform = "rotate(0deg)";
+    nav_button.childNodes[5].style.transform = "rotate(0deg)";
+    document.getElementsByTagName("*")[0].style.overflowY = "visible";
   } else {
-    top_button.style.display = "none";
+    nav.style.width = "100%";
+    nav_button.childNodes[3].style.opacity = "0";
+    nav_button.childNodes[1].style.transformOrigin = "5px 0px";
+    nav_button.childNodes[1].style.transform = "rotate(45deg)";
+    nav_button.childNodes[5].style.transformOrigin = "2px 2px";
+    nav_button.childNodes[5].style.transform = "rotate(-45deg)";
+    document.getElementsByTagName("*")[0].style.overflowY = "hidden";
   }
-}
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));

@@ -2,275 +2,121 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="description"
-      content="Personal Website for George Papoutsis used to showcase front-end web development skills"
-    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="George Papoutsis" />
     <title>George Papoutsis</title>
-    <link rel="preload" href="styles.css" as="style" />
-    <link rel="icon" href="images/logo.webp" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="styles.css"
-      media="screen"
-      id="stylesheet"
-      disabled
     />
   </head>
   <body>
-    <header>
-      <div class="navbar" id="top">
-        <a class="nav_element navbar_option" id="home_button" href="#">Home</a>
-        <a class="nav_element navbar_option" href="#about">About</a>
-        <a class="nav_element navbar_option" href="#skills">Skills</a>
-        <a href="#portfolio" class="nav_element navbar_option"> Portfolio </a>
-        <a href="#contact" class="nav_element navbar_option"> Contact </a>
+    <div class="header">
+      <div class="nav-button" id="nav-button">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
       </div>
-    </header>
-    <section class="hero">
-      <h1 id="name">George Papoutsis</h1>
-      <img
-        class="parallax"
-        id="fifth"
-        src="images/fifth.webp"
-        alt="fifth-image"
-      />
-      <img
-        class="parallax"
-        id="fourth"
-        src="images/fourth.webp"
-        alt="fourth-image"
-      />
-      <img
-        class="parallax"
-        id="third"
-        src="images/third.webp"
-        alt="third-image"
-      />
-      <img
-        class="parallax"
-        id="second"
-        src="images/second.webp"
-        alt="second-image"
-      />
-      <img
-        class="parallax"
-        id="front"
-        src="images/front.webp"
-        alt="front-image"
-      />
-    </section>
-    <div class="back_to_top">
-      <a href="#" class="hidden" id="top_btn"
-        ><img
-          class="top_button"
-          src="images/icons8-slide-up-50.webp"
-          alt="back-to-top-button"
-      /></a>
     </div>
-    <div class="filler"></div>
-    <div class="main_body">
-      <div class="about_section">
-        <h2 id="about">About</h2>
-        <div class="about_contents">
-          <p>
-            Hi, my name is George. I am a third year Computer Engineering
-            student at Carleton University. I am an aspiring front-end web
-            developer who enjoys solving problems, and taking on new challenges.
-            Over my 4 years of programming, I have worked with various
-            programming languages including but not limited to Python,
-            JavaScript, and C. I have built many projects such as discord bots
-            in Python, and other projects using HTML, CSS and JavaScript. Some
-            of which are featured on this website.
-          </p>
-        </div>
+    <div class="nav" id="nav">
+      <ul class="nav-options">
+        <li class="nav-option"><a href="">Home</a></li>
+        <li class="nav-option"><a href="#about">About</a></li>
+        <li class="nav-option"><a href="#skills">Skills</a></li>
+        <li class="nav-option"><a href="#projects">Projects</a></li>
+      </ul>
+    </div>
+    <div class="hero">
+      <div class="name">
+        <h1 class="hidden slide">
+          <span>George</span>
+          <br />
+          Papoutsis
+        </h1>
+        <h2 class="hidden slide">Computer Engineer</h2>
+      </div>
+      <img src="./images/website pfp.jpg" alt="profile picture" />
+    </div>
+    <div class="about" id="about">
+      <h1 class="hidden"><span>About Me</span></h1>
+      <h2>
+        Hi, I'm George Papoutsis! I am a 3rd year Computer Systems Engineering
+        student at Carleton University. I have 5 years of programming experience
+        and enjoy solving problems and taking on new challenges.
+      </h2>
+    </div>
+    <div class="subjects" id="skills">
+      <h1 class="hidden"><span>Skills</span></h1>
+      <div class="icons">
+        <img class="icon hidden slide" src="/images/html.webp" alt="html" />
         <img
-          class="profile-picture"
-          src="images/profile-small.webp"
-          alt="profile picture"
+          class="icon hidden slide"
+          src="/images/javascript.webp"
+          alt="javascript"
         />
+        <img class="icon hidden slide" src="/images/css.webp" alt="css" />
+        <img class="icon hidden slide" src="/images/scss.png" alt="scss" />
+        <img class="icon hidden slide" src="/images/java.webp" alt="java" />
+        <img class="icon hidden slide" src="/images/python.webp" alt="python" />
+        <img class="icon hidden slide" src="/images/c.webp" alt="c" />
       </div>
-      <div class="space"></div>
-      <div class="skills_section">
-        <h2 id="skills">Skills</h2>
-        <div class="skills_contents">
-          <h3>Programming Languages</h3>
-          <div class="skill_group" id="programming_languages">
-            <div
-              class="skill"
-              style="background-image: url('images/python.webp')"
-            ></div>
-            <div
-              class="skill"
-              style="background-image: url('images/c.webp')"
-            ></div>
-            <div
-              class="skill"
-              style="background-image: url('images/java.webp')"
-            ></div>
-            <div
-              class="skill"
-              style="background-image: url('images/javascript.webp')"
-            ></div>
-            <div
-              class="skill"
-              style="background-image: url('images/html.webp')"
-            ></div>
-            <div
-              class="skill"
-              style="background-image: url('images/css.webp')"
-            ></div>
-          </div>
-          <br /><br />
-          <h3>Softwares</h3>
-          <div class="skill_group" id="softwares">
-            <div
-              class="skill"
-              style="background-image: url('images/photoshop.webp')"
-            ></div>
-            <div
-              class="skill"
-              style="background-image: url('images/premiere.webp')"
-            ></div>
-            <div
-              class="skill"
-              style="background-image: url('images/vscode.webp')"
-            ></div>
-            <div
-              class="skill"
-              style="background-image: url('images/intelij.webp')"
-            ></div>
-            <div
-              class="skill"
-              style="background-image: url('images/vs.webp')"
-            ></div>
-          </div>
-        </div>
-      </div>
-      <div class="space"></div>
-      <div class="portfolio_section">
-        <h2 id="portfolio">Portfolio</h2>
-        <div class="portfolio_contents">
-          <div class="project">
-            <a class="project_content" href="">
-              <div class="preview">
-                <img
-                  class="project_preview"
-                  src="images/resume.webp"
-                  alt="resume"
-                />
-                <p>Click On Me</p>
-              </div>
-              <div>
-                <div class="project_name">Resume</div>
-                <p class="project_description">
-                  Want to learn more about me? View my resume.
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="project">
-            <a
-              class="project_content"
-              href="https://simple-calculator-georgepapoutsis.vercel.app/"
-              target="_blank"
-            >
-              <div class="preview">
-                <img
-                  class="project_preview"
-                  src="images/calculator_preview.webp"
-                  alt="calculator"
-                />
-                <p>Click On Me</p>
-              </div>
-              <div>
-                <div class="project_name">Calculator</div>
-                <p class="project_description">
-                  This project is a calculator that can take in as many
-                  operations as the user wants. It also features colour preset
-                  options to change the background colour. This project was made
-                  using HTML, CSS, and JavaScript
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="project">
-            <a
-              class="project_content"
-              href="https://stopwatch-georgepapoutsis.vercel.app/"
-              target="_blank"
-            >
-              <div class="preview">
-                <img
-                  class="project_preview"
-                  src="images/stopwatch.webp"
-                  alt="stopwatch"
-                />
-                <p>Click On Me</p>
-              </div>
-              <div>
-                <div class="project_name">Stopwatch</div>
-                <p class="project_description">
-                  This project is a stopwatch that allows the user to start,
-                  stop, and pause a timer. THis project was made using HTML,
-                  CSS, and JavaScript.
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="space"></div>
-      <div id="contact" class="contact_section">
+    </div>
+    <div class="get-started" id="projects">
+      <h1 class="hidden">
+        <span>Projects</span>
+      </h1>
+      <h2>
+        Whether you need help with homework or you are studying for a test, I've
+        got you covered.
+      </h2>
+      <div class="options">
         <a
-          href="https://www.youtube.com/channel/UCZTB-wyEvfhaC7rhftawYjw"
+          class="button hidden slide"
+          href="https://algorithm-visualizer-georgepapoutsis.vercel.app/"
           target="_blank"
-          class="contact_option"
         >
-          <img
-            class="contact_image"
-            src="/images/youtube-symbol.webp"
-            alt="youtube"
-          />
+          <div class="title">
+            <img src="./images/graph.png" alt="graph" />
+            <h3>Algorithm Visualizer</h3>
+          </div>
+          <p class="description">
+            Demonstrated knowledge of sorting algorithms by designing an elegant
+            and responsive algorithm visualizer using HTML, CSS, and JavaScript
+          </p>
         </a>
         <a
-          href="https://twitter.com/_Just_George__"
+          class="button hidden slide"
+          href="https://simple-calculator-georgepapoutsis.vercel.app/"
           target="_blank"
-          class="contact_option"
         >
-          <img class="contact_image" src="/images/twitter.webp" alt="twitter" />
+          <div class="title">
+            <img src="./images/calculator.png" alt="calculator" />
+            <h3>JavaScript Calculator</h3>
+          </div>
+          <p class="description">
+            Developed a fully responsive website resulting in the calculator
+            being easy to use on any screen size
+          </p>
         </a>
         <a
-          href="https://www.linkedin.com/in/george-papoutsis-481674276/"
+          class="button hidden slide"
+          href="https://2048-georgepapoutsis.vercel.app/"
           target="_blank"
-          class="contact_option"
         >
-          <img
-            class="contact_image"
-            src="/images/linkedin.webp"
-            alt="linkedin"
-          />
-        </a>
-        <a
-          href="https://github.com/George-Papoutsis"
-          target="_blank"
-          class="contact_option"
-        >
-          <img class="contact_image" src="/images/github.webp" alt="github" />
-        </a>
-        <a href="mailto: papoutsisgc@gmail.com" class="contact_option">
-          <img class="contact_image" src="/images/email.webp" alt="email" />
+          <div class="title">
+            <img src="./images/menu.png" alt="2048" />
+            <h3>2048</h3>
+          </div>
+          <p class="description">
+            Used Knowledge of HTML, JavaScript, and Sass to develop a fully
+            responsive recreation of the video game 2048
+          </p>
         </a>
       </div>
     </div>
+    <div class="footer"></div>
   </body>
   <script src="index.js"></script>
 </html>
